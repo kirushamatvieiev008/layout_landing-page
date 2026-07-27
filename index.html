@@ -6,7 +6,22 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <title>MyBiKe</title>
+    <link
+     rel="shortcut icon"
+     href="./src/images/pageLogo/favicon.png"
+     type="image/x-icon"
+     >
+    <link rel="preconnect"
+     href="https://fonts.googleapis.com"
+    >
+    <link rel="preconnect"
+     href="https://fonts.gstatic.com"
+     crossorigin="true"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+     rel="stylesheet"
+    >
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
@@ -17,6 +32,174 @@
     ></script>
   </head>
   <body>
-    <h1>Landing Page</h1>
+    <header class="header">
+      <!-- <div class="wrappNavTitle"> -->
+      <div class="navLine">
+        <svg>
+          <use href="./src/images/svgs/logo.svg">
+          </use>
+        </svg>
+        <div>
+          <a href="tel:1234555555">
+            <svg>
+              <use href="./src/images/svgs/phone.svg"></use>
+            </svg>
+          </a>
+          <div class="burger">
+            <div class="burger__line burger__line-first"></div>
+            <div class="burger__line burger__line-second"></div>
+            <div class="burger__line burger__line-third"></div>
+          </div>
+        </div>
+      </div>
+      <h1 class="headerTitle">Take the Streets</h1>
+      <!-- </div> -->
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="main__moveFree">
+          <h2 class="main__moveFree__title">Move Free</h2>
+          <p class="main__moveFree__paragraph">
+              Shift your ride, not gears. Find the fastest
+               way to move in the city as the bike adapts
+                intuitively to power the speed you need.
+          </p>
+        </section>
+        <section class="main__comparison">
+          <h2 class="main__comparison__title">Compare Bikes</h2>
+          <ul class="main__comparison__bikeList">
+            <li class="main__comparison__bikeList__item">
+              <article>
+                <img
+                class="bike__photo"
+                src="./rc/images/main/bikesProfiles/firstBike/firstBike1x.png"
+                alt="cowboy bike">
+                <h3 class="bike__name">Sporty 4</h3>
+                <p class="firstBike__description">The iconic frame brought to a new performance height as a sporty, active ride.</p>
+                <span class="price">$ 2 590</span>
+              </article>
+            </li>
+            <li class="main__comparison__bikeList__item">
+              <article>
+                <img
+                class="bike__photo"
+                src="./src/images/main/bikesProfiles/secondBike/secondBike1x.png"
+                alt="cowboy bike"
+                >
+                <h3 class="bike__name">Ride in town ST</h3>
+                <p class="secondBike__description">An open frame for an upright riding position as the most comfortable ride in town.</p>
+                <span class="price">$ 2 590</span>
+              </article>
+            </li>
+            <li class="main__comparison__bikeList__item">
+              <article>
+                <img
+                class="bike__photo"
+                src="./src/images/main/bikesProfiles/thirdBike/thirdBike1x.png"
+                alt="cowboy bike"
+                >
+                <h3 class="bike__name">Agile ride 3</h3>
+                <p class="thirdBike__description">$ 2 090</p>
+                <span class="price">The lightweight frame that has earned its street tread as a sleek, agile ride.</span>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section class="main__details">
+          <h2 class="main__details_title">The Details</h2>
+          <ul class="main__details__list">
+            <li class="main__details__list__item">
+              <article class="main__details_card">
+                <img src="./src/images/main/bikeDetails/phoneKilometres/phoneKilometres1x.png" alt="phone on bike">
+                <img src="./src/images/main/bikeDetails/breaks/breaks1x.png" alt="breaks on bike">
+                <h3 class="main__details_card__title">Auto Unlock</h3>
+                <p class="main__details_autoUnlock_paragraph">
+                  The app senses when you're nearby
+                  to unlock automatically. GPS tracking
+                  so you know where your bike is and can
+                  track it anytime.
+                </p>
+              </article>
+            </li>
+            <li class="main__details__list__item">
+              <article class="main__details_card">
+                <img src="./src/images/main/bikeDetails/stoplights/stoplights1x.png" alt="stoplights">
+                <img src="./src/images/main/bikeDetails/forwardights/forwardlights1x.png" alt="forwad lights">
+                <h3 class="main__details_card__title">Range & Integrated lights</h3>
+                <p class="main__details_autoUnlock_paragraph">
+                  The removable battery has up to
+                  70km battery autonomy and weighs
+                  only 2.4 kg. Lights integrated into
+                  the frame give you always-on visibility
+                  day and night.
+                </p>
+              </article>
+            </li>
+            <li class="main__details__list__item">
+              <article class="main__details_card">
+                <img src="#" alt="#">
+                <img src="#" alt="#">
+                <h3 class="main__details_card__title">Hydraulic disc brakes & Lightweight</h3>
+                <p class="main__details_autoUnlock_paragraph">
+                  Brakes with total stopping power the
+                  second you make contact. The removable
+                  battery has up to 70km battery autonomy
+                  and weighs only 2.4 kg. Lights integrated
+                  into the frame give you always-on visibility
+                  day and night.
+                </p>
+              </article>
+            </li>
+          </ul>
+          <a class="main__details__link" href="#">Explore</a>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <section class="footer__contacts">
+        <h2 class="footer__contacts__title">Contact us</h2>
+        <article class="footer__contacts__feetback">
+          <form class="footer__contacts__feetback__form" action="#">
+            <input
+            type="text"
+            name="username"
+            id="userName"
+            placeholder="Name"
+            >
+            <input
+            type="email"
+            name="email"
+            id="userEmail"
+            placeholder="Email"
+            >
+            <textarea
+            name="message"
+            id="userMessage"
+            placeholder="Message"></textarea>
+          </form>
+          <div>
+            <ul class="footer__contacts__list">
+              <li class="footer__contacts__list__item">
+                <span class="footer__contacts__list__item__description">Phone</span>
+                <a class="footer__contacts__list__item__link" href="#">+1 234 5555-55-55</a>
+              </li>
+              <li class="footer__contacts__item">
+                <span class="footer__contacts__list__item__description">Email</span>
+                <a class="footer__contacts__list__item__link" href="#">hello@miami.com</a>
+              </li>
+              <li class="footer__contacts__item">
+                <span class="footer__contacts__list__item__description">Address</span>
+                <a class="footer__contacts__list__item__link" href="#">
+                  400 first ave.<br>
+                  suite 700 <br>
+                  Minneapolis, MN 55401
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <div class="footer__contacts__back"></div>
+      </section>
+    </footer>
   </body>
 </html>
