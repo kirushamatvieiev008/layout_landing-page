@@ -3,3 +3,22 @@ $white: #fff;
 $inpsPlaceholders: #7e7e83;
 $inpText: #292929;
 $modalBackColor: #c2c2c2;
+$bold: 700;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+
+@mixin fonts($weight) {
+  font-family: Poppins, sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin titles() {
+  @include fonts($medium);
+
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  color: $white;
+  width: fit-content;
+}

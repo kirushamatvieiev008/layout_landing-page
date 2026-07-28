@@ -32,28 +32,30 @@
     ></script>
   </head>
   <body>
-    <header class="header">
-      <!-- <div class="wrappNavTitle"> -->
-      <div class="navLine">
-        <svg>
-          <use href="./src/images/svgs/logo.svg">
-          </use>
-        </svg>
-        <div>
-          <a href="tel:1234555555">
-            <svg>
-              <use href="./src/images/svgs/phone.svg"></use>
+    <header class="header" id="header">
+      <div class="container wrappNavTitle">
+        <div class="header__navLine">
+          <a class="header__navLine__logo__link" href="#header">
+            <svg class="header__navLine__logo__link__photo">
+              <use href="./src/images/svgs/logo.svg">
+              </use>
             </svg>
           </a>
-          <div class="burger">
-            <div class="burger__line burger__line-first"></div>
-            <div class="burger__line burger__line-second"></div>
-            <div class="burger__line burger__line-third"></div>
+          <div class="header__navLine__burgerNTel">
+            <a class="header__navLine__burgerNTel__phoneLink" href="tel:1234555555">
+              <svg class="header__navLine__burgerNTel__phoneLink__phone">
+                <use href="./src/images/svgs/phone.svg"></use>
+              </svg>
+            </a>
+            <div class="header__navLine__burgerNTel__burger">
+              <div class="header__navLine__burgerNTel__burger__lines"></div>
+              <div class="header__navLine__burgerNTel__burger__lines"></div>
+              <div class="header__navLine__burgerNTel__burger__lines"></div>
+            </div>
           </div>
         </div>
+        <h1 class="header__title">Take the Streets</h1>
       </div>
-      <h1 class="headerTitle">Take the Streets</h1>
-      <!-- </div> -->
     </header>
     <main class="main">
       <div class="container">
@@ -69,51 +71,63 @@
           <h2 class="main__comparison__title">Compare Bikes</h2>
           <ul class="main__comparison__bikeList">
             <li class="main__comparison__bikeList__item">
-              <article>
+              <article class="main__comparison__bikeList__item__bike__card">
                 <img
-                class="bike__photo"
-                src="./rc/images/main/bikesProfiles/firstBike/firstBike1x.png"
+                class="main__comparison__bikeList__item__bike__card__photo"
+                src="./src/images/main/bikesProfiles/firstBike/firstBike1x.png"
                 alt="cowboy bike">
-                <h3 class="bike__name">Sporty 4</h3>
-                <p class="firstBike__description">The iconic frame brought to a new performance height as a sporty, active ride.</p>
-                <span class="price">$ 2 590</span>
+                <h3 class="main__comparison__bikeList__item__bike__card__name">Sporty 4</h3>
+                <p class="main__comparison__bikeList__item__bike__card__description">The iconic frame brought to a new performance height as a sporty, active ride.</p>
+                <div class="main__comparison__bikeList__item__bike__card__price">$ 2 590</div>
               </article>
             </li>
             <li class="main__comparison__bikeList__item">
-              <article>
+              <article class="main__comparison__bikeList__item__bike__card">
                 <img
-                class="bike__photo"
+                class="main__comparison__bikeList__item__bike__card__photo"
                 src="./src/images/main/bikesProfiles/secondBike/secondBike1x.png"
                 alt="cowboy bike"
                 >
-                <h3 class="bike__name">Ride in town ST</h3>
-                <p class="secondBike__description">An open frame for an upright riding position as the most comfortable ride in town.</p>
-                <span class="price">$ 2 590</span>
+                <h3 class="main__comparison__bikeList__item__bike__card__name">Ride in town ST</h3>
+                <p class="main__comparison__bikeList__item__bike__card__description">An open frame for an upright riding position as the most comfortable ride in town.</p>
+                <div class="main__comparison__bikeList__item__bike__card__price">$ 2 590</div>
               </article>
             </li>
             <li class="main__comparison__bikeList__item">
-              <article>
+              <article class="main__comparison__bikeList__item__bike__card">
                 <img
-                class="bike__photo"
+                class="main__comparison__bikeList__item__bike__card__bike__photo"
                 src="./src/images/main/bikesProfiles/thirdBike/thirdBike1x.png"
                 alt="cowboy bike"
                 >
-                <h3 class="bike__name">Agile ride 3</h3>
-                <p class="thirdBike__description">$ 2 090</p>
-                <span class="price">The lightweight frame that has earned its street tread as a sleek, agile ride.</span>
+                <h3 class="main__comparison__bikeList__item__bike__card__name">Agile ride 3</h3>
+                <p class="main__comparison__bikeList__item__bike__card__description">The lightweight frame that has earned its street tread as a sleek, agile ride.</p>
+                <div class="main__comparison__bikeList__item__bike__card__price">$ 2 090</div>
               </article>
             </li>
           </ul>
         </section>
         <section class="main__details">
-          <h2 class="main__details_title">The Details</h2>
+          <h2 class="main__details__title">The Details</h2>
           <ul class="main__details__list">
             <li class="main__details__list__item">
-              <article class="main__details_card">
-                <img src="./src/images/main/bikeDetails/phoneKilometres/phoneKilometres1x.png" alt="phone on bike">
-                <img src="./src/images/main/bikeDetails/breaks/breaks1x.png" alt="breaks on bike">
-                <h3 class="main__details_card__title">Auto Unlock</h3>
-                <p class="main__details_autoUnlock_paragraph">
+              <article class="main__details__list__item__card">
+                <div class="main__details__list__item__card__limit1">
+                  <img
+                  class="main__details__list__item__card__phoneKilometres"
+                  src="./src/images/main/bikeDetails/phoneKilometres/phoneKilometres1x.png"
+                  alt="phone on bike"
+                  >
+                </div>
+                <div class="main__details__list__item__card__limit2">
+                  <img
+                  class="main__details__list__item__card__breaks"
+                  src="./src/images/main/bikeDetails/breaks/breaks1x.png"
+                  alt="breaks on bike"
+                  >
+                </div>
+                <h3 class="main__details__list__item__card__title">Auto Unlock</h3>
+                <p class="main__details__list__item__card__paragraph">
                   The app senses when you're nearby
                   to unlock automatically. GPS tracking
                   so you know where your bike is and can
@@ -122,11 +136,23 @@
               </article>
             </li>
             <li class="main__details__list__item">
-              <article class="main__details_card">
-                <img src="./src/images/main/bikeDetails/stoplights/stoplights1x.png" alt="stoplights">
-                <img src="./src/images/main/bikeDetails/forwardights/forwardlights1x.png" alt="forwad lights">
-                <h3 class="main__details_card__title">Range & Integrated lights</h3>
-                <p class="main__details_autoUnlock_paragraph">
+              <article class="main__details__list__item__card">
+                <div class="main__details__list__item__card__limit1">
+                  <img
+                  class="main__details__list__item__card__stoplights" src
+                  ="./src/images/main/bikeDetails/stoplights/stoplights1x.png"
+                  alt="stoplights"
+                  >
+                </div>
+                <div class="main__details__list__item__card__limit2">
+                  <img
+                  class="main__details__list__item__card__forwardlights"
+                  src="./src/images/main/bikeDetails/forwardights/forwardlights1x.png"
+                  alt="forwad lights"
+                  >
+                </div>
+                <h3 class="main__details__list__item__card__title">Range & Integrated lights</h3>
+                <p class="main__details__list__item__card__paragraph">
                   The removable battery has up to
                   70km battery autonomy and weighs
                   only 2.4 kg. Lights integrated into
@@ -136,11 +162,23 @@
               </article>
             </li>
             <li class="main__details__list__item">
-              <article class="main__details_card">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <h3 class="main__details_card__title">Hydraulic disc brakes & Lightweight</h3>
-                <p class="main__details_autoUnlock_paragraph">
+              <article class="main__details__list__item__card">
+                <div class="main__details__list__item__card__limit1">
+                  <img
+                  class="main__details__list__item__card__starBolts"
+                  src="./src/images/main/bikeDetails/starBolts/starBolts1x.png"
+                  alt="#"
+                  >
+                </div>
+                <div class="main__details__list__item__card__limit2">
+                  <img
+                  class="main__details__list__item__card__pedals"
+                  src="./src/images/main/bikeDetails/pedals/pedals1x.png"
+                  alt="#"
+                  >
+                </div>
+                <h3 class="main__details__list__item__card__title">Hydraulic disc brakes & Lightweight</h3>
+                <p class="main__details__list__item__card__paragraph">
                   Brakes with total stopping power the
                   second you make contact. The removable
                   battery has up to 70km battery autonomy
