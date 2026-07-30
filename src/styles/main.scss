@@ -701,6 +701,7 @@ a {
     text-transform: uppercase;
     color: $mainColor;
     width: fit-content;
+    
     @include fonts($semiBold);
 
     &:hover::after {
