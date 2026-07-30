@@ -14,11 +14,10 @@ $semiBold: 600;
   font-style: normal;
 }
 
-@mixin titles() {
+@mixin titles($size: 32px) {
   @include fonts($medium);
 
-  font-size: 32px;
+  font-size: $size;
   letter-spacing: -1.5px;
   color: $white;
-  width: fit-content;
 }
