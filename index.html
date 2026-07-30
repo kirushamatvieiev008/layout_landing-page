@@ -34,16 +34,58 @@
       <div class="container header__wrap">
         <div class="header__nav">
           <a class="header__logo-link" href="#header">
-            <img src="./src/images/svgs/logo.svg" alt="logo">
+            <img
+            class="header__logo"
+            src="./src/images/svgs/logo.svg"
+            alt="logo"
+            >
           </a>
           <div class="header__actions">
             <a class="header__phone-link" href="tel:1234555555">
-              <img src="./src/images/svgs/phone.svg" alt="phone">
+              <img
+              class="header__phone-icon"
+              src="./src/images/svgs/phone.svg"
+              alt="phone"
+              >
             </a>
-            <div class="burger">
-              <div class="burger__line"></div>
-              <div class="burger__line"></div>
-              <div class="burger__line"></div>
+
+            <a href="#modal">
+              <div class="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+              </div>
+            </a>
+            <div class="modal" id="modal">
+              <div class="container">
+                <div class="modal__top">
+                  <img
+                  class="modal__logo"
+                  src="./src/images/svgs/logoBlack.svg"
+                  alt="logo"
+                  >
+                  <a href="#" class="modal__close">
+                    <img
+                    class="modal__close-icon"
+                    src="./src/images/svgs/close.svg"
+                    alt="close__button"
+                    >
+                  </a>
+                </div>
+                <nav class="modal__nav">
+                  <ul class="modal__nav-list">
+                    <li class="modal__nav-item"><a class="modal__nav-link" href="#header">Home</a></li>
+                    <li class="modal__nav-item"><a class="modal__nav-link" href="#about__section">About Us</a></li>
+                    <li class="modal__nav-item"><a class="modal__nav-link" href="#compare__section">Compare Bikes</a></li>
+                    <li class="modal__nav-item"><a class="modal__nav-link" href="#details__section">Details</a></li>
+                    <li class="modal__nav-item"><a class="modal__nav-link" href="#contacts__section">Contacts</a></li>
+                  </ul>
+                </nav>
+                <div class="modal__book">
+                  <a class="modal__book-link" href="tel:1234555555">+1 234 5555-55-55</a>
+                  <span class="modal__book-description">Book a test ride</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -52,20 +94,20 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="main__moveFree">
-          <h2 class="main__moveFree__title">Move Free</h2>
-          <p class="main__moveFree__paragraph">
+        <section class="move-free" id="about__section">
+          <h2 class="move-free__title">Move Free</h2>
+          <p class="move-free__paragraph">
               Shift your ride, not gears. Find the fastest
                way to move in the city as the bike adapts
                 intuitively to power the speed you need.
           </p>
         </section>
-        <section class="main__comparison">
-          <h2 class="main__comparison__title">Compare Bikes</h2>
-          <ul class="main__comparison__bikeList">
-            <li class="comparison__item1">
+        <section class="comparison" id="compare__section">
+          <h2 class="comparison__title">Compare Bikes</h2>
+          <ul class="comparison__list">
+            <li class="comparison__item">
               <article class="bike-card">
-                <picture class="pictures">
+                <picture class="bike-card__picture">
                   <source
                   srcset="./src/images/main/bikesProfiles/firstBike/firstBike2x.png"
                   media="(min-width: 400px)"
@@ -92,9 +134,9 @@
                 <div class="bike-card__price">$ 2 590</div>
               </article>
             </li>
-            <li class="comparison__item2">
+            <li class="comparison__item">
               <article class="bike-card">
-                <picture class="pictures">
+                <picture class="bike-card__picture">
                   <source
                   srcset="./src/images/main/bikesProfiles/secondBike/secondBike2x.png"
                   media="(min-width: 400px)"
@@ -121,10 +163,10 @@
                 <div class="bike-card__price">$ 2 590</div>
               </article>
             </li>
-            <li class="comparison__item3">
+            <li class="comparison__item">
               <article class="bike-card">
 
-                <picture class="pictures">
+                <picture class="bike-card__picture">
                   <source
                   srcset="./src/images/main/bikesProfiles/thirdBike/thirdBike2x.png"
                   media="(min-width: 400px)"
@@ -153,14 +195,14 @@
             </li>
           </ul>
         </section>
-        <section class="main__details">
-          <h2 class="main__details__title">The Details</h2>
-          <ul class="main__details__list">
+        <section class="details" id="details__section">
+          <h2 class="details__title">The Details</h2>
+          <ul class="details__list">
             <li class="details__item">
               <article class="detail-card">
-                <div class="detail-card-photos">
-                  <div class="detail-card-photos-ov1">
-                    <picture class="main__details-pictures detail-card-photos-first">
+                <div class="detail-card__photos">
+                  <div class="detail-card__photo-wrap detail-card__photo-wrap--left">
+                    <picture class="detail-card__picture">
                       <source
                       srcset="./src/images/main/bikeDetails/phoneKilometres/phoneKilometres2x.png"
                       media="(min-width: 650px)"
@@ -184,8 +226,8 @@
                     </picture>
                   </div>
 
-                  <div class="detail-card-photos-ov2">
-                    <picture class="main__details-pictures detail-card-photos-second">
+                  <div class="detail-card__photo-wrap detail-card__photo-wrap--right">
+                    <picture class="detail-card__picture">
                       <source
                       srcset="./src/images/main/bikeDetails/breaks/breaks2x.png"
                       media="(min-width: 650px)"
@@ -221,9 +263,9 @@
             </li>
             <li class="details__item">
               <article class="detail-card">
-                <div class="detail-card-photos">
-                  <div class="detail-card-photos-ov1">
-                    <picture class="main__details-pictures">
+                <div class="detail-card__photos">
+                  <div class="detail-card__photo-wrap detail-card__photo-wrap--left">
+                    <picture class="detail-card__picture">
                       <source
                       srcset="./src/images/main/bikeDetails/stoplights/stoplights2x.png"
                       media="(min-width: 650px)"
@@ -246,8 +288,8 @@
                       >
                     </picture>
                   </div>
-                  <div class="detail-card-photos-ov2">
-                    <picture class="main__details-pictures">
+                  <div class="detail-card__photo-wrap detail-card__photo-wrap--right">
+                    <picture class="detail-card__picture">
                       <source
                       srcset="./src/images/main/bikeDetails/forwardights/forwardlights2x.png"
                       media="(min-width: 650px)"
@@ -283,9 +325,9 @@
             </li>
             <li class="details__item">
               <article class="detail-card">
-                <div class="detail-card-photos">
-                  <div class="detail-card-photos-ov1 detail-card-photos-ov1-lastChild">
-                    <picture class="main__details-pictures">
+                <div class="detail-card__photos">
+                  <div class="detail-card__photo-wrap detail-card__photo-wrap--left detail-card__photo-wrap--compact">
+                    <picture class="detail-card__picture">
                       <source
                       srcset="./src/images/main/bikeDetails/starBolts/starBolts2x.png"
                       media="(min-width: 650px)"
@@ -308,8 +350,8 @@
                       >
                     </picture>
                   </div>
-                  <div class="detail-card-photos-ov2 detail-card-photos-ov2-lastChild">
-                    <picture class="main__details-pictures">
+                  <div class="detail-card__photo-wrap detail-card__photo-wrap--right detail-card__photo-wrap--compact">
+                    <picture class="detail-card__picture">
                       <source
                       srcset="./src/images/main/bikeDetails/pedals/pedals2x.png"
                       media="(min-width: 650px)"
@@ -345,53 +387,53 @@
               </article>
             </li>
           </ul>
-          <a class="main__details__link" href="#">Explore</a>
+          <a class="details__link" href="#">Explore</a>
         </section>
       </div>
     </main>
     <footer class="footer">
       <div class="container">
-        <section class="footer__contacts">
-          <h2 class="footer__contacts__title">Contact us</h2>
-          <article class="footer__contacts__feedback">
-            <form class="footer__contacts__feedback-form" action="#">
-              <div class="footer__contacts__feedback-form__wrap">
+        <section class="contacts" id="contacts__section">
+          <h2 class="contacts__title">Contact us</h2>
+          <article class="contacts__feedback">
+            <form class="contacts__form" action="#">
+              <div class="contacts__form-wrap">
                 <input
-                class="footer__contacts__feedback-form__input"
+                class="contacts__input"
                 type="text"
                 name="username"
                 id="userName"
                 placeholder="Name"
                 >
                 <input
-                class="footer__contacts__feedback-form__input"
+                class="contacts__input"
                 type="email"
                 name="email"
                 id="userEmail"
                 placeholder="Email"
                 >
                 <textarea
-                class="footer__contacts__feedback-form__textarea"
+                class="contacts__textarea"
                 name="message"
                 id="userMessage"
                 placeholder="Message"
                 ></textarea>
               </div>
-              <button class="footer__contacts__feedback-form__submit" type="submit">Send</button>
+              <button class="contacts__submit" type="submit">Send</button>
             </form>
-            <div class="footer__contacts__feedback-links">
-              <ul class="footer__contacts__feedback-links__list">
-                <li class="footer__contacts__feedback-links__item">
-                  <span class="footer__contacts__feedback-links__label">Phone</span>
-                  <a class="footer__contacts__feedback-links__link" href="#">+1 234 5555-55-55</a>
+            <div class="contacts__links">
+              <ul class="contacts__links-list">
+                <li class="contacts__links-item">
+                  <span class="contacts__links-label">Phone</span>
+                  <a class="contacts__links-link" href="#">+1 234 5555-55-55</a>
                 </li>
-                <li class="footer__contacts__feedback-links__item">
-                  <span class="footer__contacts__feedback-links__label">Email</span>
-                  <a class="footer__contacts__feedback-links__link" href="#">hello@miami.com</a>
+                <li class="contacts__links-item">
+                  <span class="contacts__links-label">Email</span>
+                  <a class="contacts__links-link" href="#">hello@miami.com</a>
                 </li>
-                <li class="footer__contacts__feedback-links__item">
-                  <span class="footer__contacts__feedback-links__label">Address</span>
-                  <a class="footer__contacts__feedback-links__link" href="#">
+                <li class="contacts__links-item">
+                  <span class="contacts__links-label">Address</span>
+                  <a class="contacts__links-link" href="#">
                     400 first ave.<br>
                     suite 700 <br>
                     Minneapolis, MN 55401
