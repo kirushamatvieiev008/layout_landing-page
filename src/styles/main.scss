@@ -108,7 +108,6 @@ a {
   &__actions {
     display: flex;
     align-items: center;
-    width: 72px;
     height: 38px;
     gap: 24px;
   }
@@ -116,11 +115,44 @@ a {
   &__phone-link {
     padding: 3px;
     height: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   &__phone-icon {
     width: 18px;
     height: 18px;
+    transition: transform 1s;
+  }
+
+  &__phone-link:hover &__phone-icon {
+    transform: rotate(-360deg);
+  }
+
+  &__phone-text {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-right: 8px;
+    transform: translate(20px, -50%);
+    white-space: nowrap;
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+    pointer-events: none;
+
+    @include fonts($bold);
+  }
+
+  &__phone-link:hover &__phone-text {
+    opacity: 1;
+    transform: translate(0, -50%);
   }
 
   &__title {
@@ -158,6 +190,17 @@ a {
     height: 2px;
     background-color: white;
     border-radius: 2px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    .burger__line1 {
+      width: 60%;
+    }
+
+    .burger__line3 {
+      width: 80%;
+    }
   }
 }
 
@@ -563,6 +606,15 @@ a {
       font-size: 14px;
       line-height: 20px;
     }
+
+    &:hover {
+      border: none;
+      outline: 1px solid #d5d7de;
+    }
+    &:focus {
+      // border: none;
+      outline: 1px solid #292929;
+    }
   }
 
   &__textarea {
@@ -574,6 +626,16 @@ a {
     line-height: 20px;
     font-size: 14px;
     padding: 14px 16px;
+
+    &:focus {
+      border: none;
+      outline: 1px solid #292929;
+    }
+
+    &:hover {
+      // border: none;
+      outline: 1px solid #d5d7de;
+    }
   }
 
   &__submit {
@@ -665,18 +727,26 @@ a {
 // -_-_-_-_-_-_-_-_-_-_-_-_-_-_modal-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 .modal {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #7e7e83;
+  z-index: 2;
+
+  transform: translateX(100%);
+  visibility: hidden;
+  transition:
+    transform 0.6s ease-in-out,
+    visibility 0s linear 0.6s;
 
   &:target {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    background-color: #7e7e83;
-    height: 100vh;
-    z-index: 2;
-
+    transform: translateX(0);
+    visibility: visible;
+    transition:
+      transform 0.6s ease-in-out,
+      visibility 0s linear 0s;
   }
 
   &__top {
@@ -701,18 +771,17 @@ a {
     text-transform: uppercase;
     color: $mainColor;
     width: fit-content;
-    
+
     @include fonts($semiBold);
 
     &:hover::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -8px;
       left: 0;
       background-color: $mainColor;
       width: 100%;
       height: 1px;
-
     }
   }
 
@@ -734,7 +803,7 @@ a {
     @include fonts($semiBold);
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -8px;
       left: 0;
@@ -752,7 +821,7 @@ a {
     width: fit-content;
 
     &:hover::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -8px;
       left: 0;
@@ -774,4 +843,16 @@ a {
     width: 24px;
     height: 24px;
   }
+}
+
+.hoverBtns {
+  transition: all 0.2s;
+}
+
+.hoverBtns:hover {
+  box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+}
+
+.hoverBtns:active {
+  box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
 }
