@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
   <head>
     <meta charset="UTF-8">
@@ -347,7 +347,7 @@
                       <img
                       class="detail-card__icon"
                       src="./src/images/main/bikeDetails/starBolts/starBolts1x.png"
-                      alt="#"
+                      alt="bike bolts"
                       >
                     </picture>
                   </div>
@@ -397,9 +397,14 @@
         <section class="contacts" id="contacts__section">
           <h2 class="contacts__title">Contact us</h2>
           <article class="contacts__feedback">
-            <form class="contacts__form" action="#">
+            <form
+            class="contacts__form"
+            action="#"
+            onsubmit="this.reset(); return false;"
+            >
               <div class="contacts__form-wrap">
                 <input
+                required
                 class="contacts__input"
                 type="text"
                 name="username"
@@ -407,6 +412,7 @@
                 placeholder="Name"
                 >
                 <input
+                required
                 class="contacts__input"
                 type="email"
                 name="email"
@@ -426,15 +432,19 @@
               <ul class="contacts__links-list">
                 <li class="contacts__links-item">
                   <span class="contacts__links-label">Phone</span>
-                  <a class="contacts__links-link" href="#">+1 234 5555-55-55</a>
+                  <a class="contacts__links-link" href="tel:+12345555555">+1 234 5555-55-55</a>
                 </li>
                 <li class="contacts__links-item">
                   <span class="contacts__links-label">Email</span>
-                  <a class="contacts__links-link" href="#">hello@miami.com</a>
+                  <a class="contacts__links-link" href="mailto:hello@miami.com">hello@miami.com</a>
                 </li>
                 <li class="contacts__links-item">
                   <span class="contacts__links-label">Address</span>
-                  <a class="contacts__links-link" href="#">
+                  <a
+                  class="contacts__links-link"
+                  href="https://maps.app.goo.gl/MHY9NJVYXNYpz4Qg9"
+                  target="_blank"
+                  >
                     400 first ave.<br>
                     suite 700 <br>
                     Minneapolis, MN 55401
